@@ -1,0 +1,34 @@
+.test-container {
+    padding-top: 5vh;
+    width: 100%;
+    background: peachpuff;
+    background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);
+}
+
+.test-detail-section {
+    display: flex;
+    align-items: center;
+    height: 85vh;
+    background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);
+}
+
+.test-left {
+    width: 50%;
+    margin-right: 50px;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.test-right {
+    width: 50%;
+}
+
+.test-cards {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}

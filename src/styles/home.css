@@ -1,0 +1,103 @@
+.home {
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+.home-header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main {
+  padding: 2rem;
+}
+
+.mental-health-intro h1 {
+  color: rgb(255, 255, 255);
+  /* NHS Blue */
+  margin-left: 5%;
+}
+
+.mental-health-intro-title {
+  margin-bottom: 1rem;
+  font-size: 2.5em;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+
+.mental-health-intro article {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  margin-left: 5%;
+}
+
+.mind-plan {
+  background:#FDE5E3;
+  /* Light grey background */
+  padding: 2rem;
+}
+
+.mind-plan h2 {
+  margin-bottom: 1rem;
+}
+
+.mind-plan-content {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+}
+
+.mind-plan-info h3 {
+  margin: 0;
+}
+
+.mind-plan-info p {
+  margin-bottom: 1rem;
+}
+
+.mind-plan-info button {
+  background-color: #007f3b;
+  /* NHS Green */
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.mind-plan-info button:hover {
+  background-color: #C8A2C8
+  /* NHS Blue */
+}
+
+.mind-plan-image img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+
+  .mental-health-intro,
+  .mind-plan-content {
+    flex-direction: column;
+  }
+
+  .mental-health-intro article,
+  .mind-plan-info {
+    margin-left: 0;
+    /* Resetting the margin to stack elements vertically */
+  }
+
+  .mind-plan-image img {
+    margin-top: 20px;
+    /* Adding some space between the image and content on smaller screens */
+  }
+}

@@ -1,0 +1,14 @@
+.results-container {
+    width: 100%;
+    height: 100%;
+    padding: 18vh 0 3vh 5vh;
+    background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);
+}
+
+.resultcards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
