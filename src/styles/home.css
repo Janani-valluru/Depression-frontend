@@ -101,3 +101,26 @@ h2 {
     /* Adding some space between the image and content on smaller screens */
   }
 }
+/* ... (Your existing styles) ... */
+
+@media screen and (max-width: 768px) {
+
+  .mental-health-intro,
+  .mind-plan-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mental-health-intro article,
+  .mind-plan-info {
+    margin-left: 0;
+    margin-right: 0;
+    /* Adjusted margin */
+  }
+
+  .mind-plan-image img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+}

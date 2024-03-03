@@ -80,7 +80,7 @@ const Blog = () => {
     if (!user) {
       window.location.href = "/login";
     }
-    fetch(`${API_URL}/api/blogs`, {
+    fetch('http://localhost:8000/api/user/blogs', {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

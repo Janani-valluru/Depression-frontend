@@ -45,3 +45,23 @@ background-image: linear-gradient(to right top, #d2df83, #f6c375, #ffa685, #ff92
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.user-profile {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #42ba97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-icon {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Add this to your existing CSS */
+/* Your existing styles... */
+

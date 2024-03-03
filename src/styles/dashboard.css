@@ -1,0 +1,19 @@
+.dashboard-container {
+    display: flex;
+    width: 100%;
+}
+
+.side-menu {
+    width: 30%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
+}
+
+.graph-container {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Ensure padding is included in the width */
+}

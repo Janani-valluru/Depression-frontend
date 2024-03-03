@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { quizQuestions } from "./constants/quizquestions";
 import { useScoreContext } from "../hooks/useScoreContext";
 import "../styles/quizpage.css";
+import { AuthContext } from "../context/AuthContext"; // Import AuthContext
 
 const QuizPage = () => {
   const { dispatch } = useScoreContext();
@@ -12,6 +13,7 @@ const QuizPage = () => {
   const [score, setScore] = useState(0);
   const [title, setTitle] = useState("");
   const [questions, setQuestions] = useState([]);
+  const { user } = React.useContext(AuthContext); // Access user from AuthContext
 
   useEffect(() => {
     if (!quizQuestions[test]) {
@@ -36,13 +38,17 @@ const QuizPage = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
+      console.log(score);
+      console.log();
       // end of quiz
       localStorage.setItem("score", JSON.stringify(score));
       dispatch({
         type: "UPDATE_SCORE",
-        payload: score,
+
+        payload: { username: user?.name, title, score },
       });
-      navigate(`/results`);
+
+      navigate(`/results`, { state: { title } });
     }
   };
 
