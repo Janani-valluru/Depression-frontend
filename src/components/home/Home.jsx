@@ -9,6 +9,7 @@ const Image = styled(Box)`
   width: 100%;
   background: url(${background}) center/cover no-repeat;
   height: 60vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
