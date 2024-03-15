@@ -1,39 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Dashboard() {
-  const [userData, setUserData] = useState(null);
+  const [iframeUrl, setIframeUrl] = useState(""); // State to store the iframe URL
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get("http://localhost:8000/api/user/signup");
-      const data = response.data;
-      setUserData(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  /*useEffect(() => {
+    // Fetch the embedded dashboard URL from the backend
+    axios
+      .get(
+        "http://localhost:3000/public/dashboard/11940347-167b-4364-9193-bc58f4d2a204"
+      )
+      .then((response) => {
+        setIframeUrl(response.data.iframeUrl);
+      })
+      .catch((error) => {
+        console.error("Error fetching embedded dashboard URL:", error);
+      });
+  }, []); // Run this effect only once on component mount*/
 
   return (
-    <div className="dashboard-container">
-      <div className="side-menu">
-        {/* Display user data in the left menu */}
-        {userData && (
-          <div>
-            <h2>User Information</h2>
-            <p>Name: {userData.name}</p>
-            <p>Email: {userData.email}</p>
-          </div>
-        )}
-      </div>
-      <div className="graph-container">
-        {/* Placeholder for the graph */}
-        <h2>Graph</h2>
-      </div>
+    <div>
+      <iframe
+        src={
+          "http://localhost:3000/public/dashboard/11940347-167b-4364-9193-bc58f4d2a204"
+        }
+        title="Metabase Dashboard"
+        width="100%"
+        height="600"
+        frameBorder="0"
+        style={{ opacity: 0.5 }}
+      ></iframe>
     </div>
   );
 }
