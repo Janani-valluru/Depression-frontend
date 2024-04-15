@@ -1,35 +1,88 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { Line } from "react-chartjs-2";
+import API from "../util/API"; // Assuming this is correctly defined in your project
 
-function Dashboard() {
-  const [iframeUrl, setIframeUrl] = useState(""); // State to store the iframe URL
+import { AuthContext } from "../context/AuthContext";
+import { CategoryScale } from "chart.js";
+Chart.register(CategoryScale);
+import Chart from "chart.js/auto";
 
-  /*useEffect(() => {
-    // Fetch the embedded dashboard URL from the backend
-    axios
-      .get(
-        "http://localhost:3000/public/dashboard/11940347-167b-4364-9193-bc58f4d2a204"
-      )
-      .then((response) => {
-        setIframeUrl(response.data.iframeUrl);
-      })
-      .catch((error) => {
-        console.error("Error fetching embedded dashboard URL:", error);
-      });
-  }, []); // Run this effect only once on component mount*/
+function Dashboard(props) {
+  const [chartData, setChartData] = useState({});
+
+  const { user } = React.useContext(AuthContext); // Access user from AuthContext
+  // Access user from AuthContext
+  let chartLabels, chartScores;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        console.log("Fetching dashboard data for user:", user.name);
+        const response = await API.getDashboardData(user.name); // Assuming this is your API function to fetch dashboard data
+        if (response && response.data) {
+          const userData = response.data;
+
+          chartLabels = userData.map((item) => item.title);
+          chartScores = userData.map((item) => parseInt(item.score));
+          console.log("Chart labels:", chartLabels);
+          console.log("Chart scores:", chartScores);
+          const data = {
+            labels: chartLabels,
+            datasets: [
+              {
+                label: "Score",
+                data: chartScores,
+                backgroundColor: "rgba(75, 192, 192, 0.2)",
+                borderColor: "rgba(75, 192, 192, 1)",
+                borderWidth: 1,
+              },
+            ],
+          };
+
+          setChartData(data);
+        } else {
+          console.error(
+            "Error fetching dashboard data: Response data is invalid."
+          );
+        }
+      } catch (error) {
+        console.error("Error fetching dashboard data:", error);
+      }
+    };
+
+    fetchData();
+  }, [user]);
+
+  const options = {
+    scales: {
+      x: {
+        type: "category",
+        labels: chartLabels,
+        title: {
+          display: true,
+        },
+      },
+      y: {
+        ticks: {
+          beginAtZero: true,
+        },
+        title: {
+          display: true,
+          text: "Score",
+        },
+      },
+    },
+  };
+  const chartContainerStyle = {
+    marginTop: "100px", // Adjust the top margin to create space
+    height: "625px", // Adjust the height as per your requirement
+  };
 
   return (
-    <div>
-      <iframe
-        src={
-          "http://localhost:3000/public/dashboard/11940347-167b-4364-9193-bc58f4d2a204"
-        }
-        title="Metabase Dashboard"
-        width="100%"
-        height="600"
-        frameBorder="0"
-        style={{ opacity: 0.5 }}
-      ></iframe>
+    <div style={chartContainerStyle}>
+      {Object.keys(chartData).length > 0 && (
+        <Line data={chartData} options={options} />
+      )}
     </div>
   );
 }

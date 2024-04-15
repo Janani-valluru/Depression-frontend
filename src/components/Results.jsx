@@ -7,7 +7,7 @@ import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
 
 const Results = () => {
-  const { score, title } = useScoreContext();
+  const { score, title, type_id } = useScoreContext();
   const { user } = React.useContext(AuthContext);
   const [hasSentResults, setHasSentResults] = useState(false);
 
@@ -15,14 +15,18 @@ const Results = () => {
     const sendResultsToServer = async () => {
       try {
         console.log("Sending results to the server...");
-        if (user) {
+        if (user && !hasSentResults) {
           console.log("User and not sent results, proceeding...");
-          await axios.post("http://localhost:8000/api/tests/", {
-            username: user.name, // Assuming 'name' is the correct property
-            title,
-            score,
-          });
-          console.log("Results sent successfully!");
+          const response = await axios.post(
+            "http://localhost:8000/api/tests/",
+            {
+              username: user.name, // Assuming 'name' is the correct property
+              title,
+              score,
+              type_id,
+            }
+          );
+          console.log("Results sent successfully!", response.data);
           // Update state to indicate that the results have been sent
         } else {
           console.log("No user or results already sent, skipping...");
@@ -34,7 +38,7 @@ const Results = () => {
     };
 
     sendResultsToServer();
-  }, [user, score, title, hasSentResults]);
+  }, [user, score, title, type_id, hasSentResults]);
 
   return (
     <div className="results-container">

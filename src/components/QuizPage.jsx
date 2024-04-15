@@ -2,6 +2,7 @@ import React, { useEffect, useContext, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { quizQuestions } from "./constants/quizquestions";
 import { useScoreContext } from "../hooks/useScoreContext";
+import { Tests } from "./constants/data";
 import "../styles/quizpage.css";
 import { AuthContext } from "../context/AuthContext"; // Import AuthContext
 
@@ -23,7 +24,21 @@ const QuizPage = () => {
       setQuestions(quizQuestions[test].questions);
     }
   }, []);
-
+  console.log(quizQuestions[test]);
+  console.log(quizQuestions[test].title);
+  function getTypeIDByHeading(data, searchString) {
+    console.log(searchString);
+    for (const item of data) {
+      console.log(item);
+      if (item.heading.toLowerCase() === searchString.toLowerCase()) {
+        return item.type_id;
+      }
+    }
+    return null; // Return null if no match is found
+  }
+  const matchingTypeId = getTypeIDByHeading(Tests, quizQuestions[test].title);
+  console.log(matchingTypeId); // Output: 6
+  console.log(Tests);
   const handleClick = (answer) => {
     // add to score
     if (answer === "v") {
@@ -45,7 +60,12 @@ const QuizPage = () => {
       dispatch({
         type: "UPDATE_SCORE",
 
-        payload: { username: user?.name, title, score },
+        payload: {
+          username: user?.name,
+          title,
+          score,
+          type_id: matchingTypeId,
+        },
       });
 
       navigate(`/results`, { state: { title } });

@@ -7,7 +7,7 @@
     justify-content: space-around;
     height: 15vh;
     z-index: 9999;
-background-image: linear-gradient(to right top, #d2df83, #f6c375, #ffa685, #ff92a7, #e38ccb);
+    background-image: linear-gradient(to right top, #d2df83, #f6c375, #ffa685, #ff92a7, #e38ccb);
 
 }
 
@@ -36,15 +36,19 @@ background-image: linear-gradient(to right top, #d2df83, #f6c375, #ffa685, #ff92
 .navbar-link:hover {
     color: #645a5a;
 }
-.navbar-link:active{
+
+.navbar-link:active {
     color: rgb(186, 66, 180);
 }
-.navbar-link:focus{
-    color: rgb(255,255,255);
+
+.navbar-link:focus {
+    color: rgb(255, 255, 255);
 }
-h1{
+
+h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .user-profile {
     position: relative;
     width: 40px;
@@ -62,6 +66,6 @@ h1{
     font-size: 16px;
     font-weight: bold;
 }
+
 /* Add this to your existing CSS */
 /* Your existing styles... */
-

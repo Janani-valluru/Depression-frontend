@@ -1,44 +1,26 @@
 import React from "react";
-import image1 from "../../assets/mind-plan.png";
+import image1 from "../../assets/help.jpg";
 import "../../styles/home.css";
 import { styled, Box } from "@mui/material";
-import background from "../../assets/home-mental.jpg";
+import background from "../../assets/homepagenew.png";
 import { Link } from "react-router-dom";
 
 const Image = styled(Box)`
   width: 100%;
-  background: url(${background}) center/cover no-repeat;
-  height: 60vh;
-
+  background: url(${background}) center/82%;
+  height: 85vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* This ensures that the content is on the left */
   justify-content: center;
-
-  @media screen and (max-width: 768px) {
-    height: 40vh;
-    background-size: contain;
-  }
+  align-items: center;
+  overflow: hidden; /* This will prevent any potential overflow */
 `;
 
 const Home = () => {
   return (
     <div style={{ marginTop: "15vh" }} className="home">
       <main>
-        <Image>
-          <section className="mental-health-intro">
-            <h1 className="mental-health-intro-title">Every Mind Matters</h1>
-            <article>
-              <h2>What is mental health?</h2>
-              <p>
-                Having good mental health helps us relax more, achieve more and
-                enjoy our lives more. There are simple things we can all do to
-                look after our mental health and wellbeing – take our quiz to
-                get started today with a free plan, expert advice, and practical
-                tips.
-              </p>
-            </article>
-          </section>
-        </Image>
+        <Image></Image>
         <section className="mind-plan">
           <div className="mind-plan-content">
             <div className="mind-plan-info">
@@ -46,8 +28,8 @@ const Home = () => {
               <p>
                 Take our carefully crafted quiz to discover your mental health
                 score on things like depression, happiness scale, workplace
-                stress, etc. Get personalized tips and advice on what you can do
-                to look after your mental health.
+                stress etc; and get personalised tips and advice on what you can
+                do to look after your mental health.
               </p>
               <Link to="/test">
                 <button>Take the quiz</button>

@@ -1,9 +1,10 @@
-import stress from "../../assets/stress-test.png";
-import anxious from "../../assets/anxious-test.png";
-import sleep from "../../assets/sleep-test.png";
-import sad from "../../assets/sad-test.png";
-import workplace from "../../assets/workplace-test.png";
-import happiness from "../../assets/happy-test.png";
+import stress from "../../assets/stress.jpg";
+import anxious from "../../assets/anxiety.png";
+import sleep from "../../assets/sleep.jpg";
+import sad from "../../assets/sad.jpg";
+import workplace from "../../assets/workplace.jpg";
+import happiness from "../../assets/happy.jpg";
+import { quizQuestions } from "./quizquestions";
 
 export const API_URL = "http://localhost:8000";
 
@@ -19,7 +20,8 @@ export const categories = [
 export const Tests = [
   {
     id: 1,
-    heading: "Am i stressed",
+    type_id: 6,
+    heading: "Am i stressed?",
     description:
       "Explore how stress has been taking a toll on your well-being. Take the assessment today!",
     img: stress,
@@ -27,6 +29,7 @@ export const Tests = [
   },
   {
     id: 2,
+    type_id: 1,
     heading: "Am I Sad Or Depressed?",
     description:
       "Is it more than just feeling low and having bad days? Take the assessment to find out.",
@@ -35,7 +38,8 @@ export const Tests = [
   },
   {
     id: 3,
-    heading: "How am I sleeping ?",
+    type_id: 6,
+    heading: "How am I sleeping?",
     description:
       "Are you getting the quality sleep you deserve? Know today by taking the assessment.",
     img: sleep,
@@ -43,6 +47,7 @@ export const Tests = [
   },
   {
     id: 4,
+    type_id: 4,
     heading: "Am I Anxious?",
     description:
       "Anxiety jitters never leave you. Take the self-check today to understand your anxiety better.",
@@ -51,13 +56,16 @@ export const Tests = [
   },
   {
     id: 5,
+    type_id: 6,
     heading: "Happiness Scale",
-    description: "Are you truly happy with your life, or do you feel there's room for improvement? Know today by taking the assessment.",
+    description:
+      "Are you truly happy with your life, or do you feel there's room for improvement? Know today by taking the assessment.",
     img: happiness,
     link: "/taketest/happiness",
   },
   {
     id: 6,
+    type_id: 6,
     heading: "Workplace Stress Test",
     description:
       "Are you getting sick-listed due to work-related stress? Know today by taking the assessment",

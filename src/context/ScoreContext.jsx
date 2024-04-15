@@ -7,8 +7,10 @@ export const scoreReducer = (state, action) => {
   switch (action.type) {
     case "UPDATE_SCORE":
       return {
+        ...state,
         score: action.payload.score,
         title: action.payload.title,
+        type_id: action.payload.type_id,
       };
     default:
       return state;
@@ -19,6 +21,7 @@ export const ScoreContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(scoreReducer, {
     score: 0,
     title: null,
+    type_id: null,
   });
 
   useEffect(() => {
@@ -26,7 +29,7 @@ export const ScoreContextProvider = ({ children }) => {
     if (score) {
       dispatch({
         type: "UPDATE_SCORE",
-        payload: { score: score, title: state.title },
+        payload: { score: score, title: state.title, type_id: state.type_id },
       });
     }
   }, []);

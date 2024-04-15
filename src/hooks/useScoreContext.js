@@ -14,7 +14,7 @@ export const useScoreContext = () => {
 };
 
 const Results = async (props) => {
-  const { username, title, score } = props;
+  const { username, title, score, type_id } = props;
 
   useEffect(() => {
     const sendResults = async () => {
@@ -24,7 +24,7 @@ const Results = async (props) => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ username, title, score }),
+          body: JSON.stringify({ username, title, score, type_id }),
         });
 
         if (!response.ok) {
@@ -38,7 +38,7 @@ const Results = async (props) => {
     };
 
     sendResults();
-  }, [username, title, score]);
+  }, [username, title, score, type_id]);
 
   return null; // or you can return a loading indicator or handle the response as needed
 };
