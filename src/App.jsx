@@ -22,7 +22,7 @@ import BotpressChat from "./components/BotpressChat.jsx";
 
 import { Toaster } from "react-hot-toast";
 import NotFoundPage from "./components/404page";
-
+import Recommendations from "./components/Recommendations.jsx";
 function App() {
   return (
     <Router>
@@ -51,6 +51,8 @@ function AppContent() {
         <Route path="/post/:postId" element={<DetailedPost />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/recommendations" element={<Recommendations />} />
       </Routes>
       <BotpressChat isHomePage={isHomePage} />
       <Footer />

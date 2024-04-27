@@ -60,7 +60,7 @@ export const quizQuestions = {
     ],
   },
   happiness: {
-    title: "How happy am I?",
+    title: "Happiness Scale?",
     questions: [
       "I feel happy.",
       "I feel like I am enjoying life.",
