@@ -1,4 +1,4 @@
-.dashboard-container {
+/*.dashboard-container {
     display: flex;
     width: 100%;
 }
@@ -10,7 +10,6 @@
     box-sizing: border-box;
     /* Ensure padding is included in the width */
 }
-
 .graph-container {
     width: 70%;
     padding: 20px;

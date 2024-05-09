@@ -64,7 +64,8 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  /*background-image: linear-gradient(#fcfa82, rgb(164, 203, 239), #78d2c2, rgb(189, 235, 240), #e7e6a2);*/
+  
+  background: #FDE5E3;
   
 }
 
@@ -75,6 +76,7 @@
   right: 0;
   bottom: 0;
   left: 0;
+  background-image: '#d3f0ec';
   
   /* Adjust opacity as needed */
 }

@@ -21,7 +21,7 @@
     width: 34px;
     height: 14px;
     display: block;
-    background: #9A9999;
+    background:#ffdfba;
     border-radius: 8px;
     transition: background 0.2s ease;
 }
@@ -33,7 +33,7 @@
     width: 20px;
     height: 20px;
     display: block;
-    background: white;
+    background:#ffdfba;
     border-radius: 10px;
     box-shadow: 0 3px 8px rgba(154, 153, 153, 0.5);
     transition: all 0.2s ease;

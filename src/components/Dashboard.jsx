@@ -98,7 +98,7 @@ function Dashboard(props) {
 
   const chartContainerStyle = {
     marginTop: "100px", // Adjust the top margin to create space
-    height: "1000px", // Adjust the height as per your requirement
+    height: "1050px", // Adjust the height as per your requirement
   };
 
   return (

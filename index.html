@@ -30,6 +30,38 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Visme Form Embed Code -->
+    <div id="formContainer" style="display: none">
+      <div
+        class="visme_d"
+        data-title="Custom Form"
+        data-url="mxgzq6qn-custom-form?fullPage=true"
+        data-domain="forms"
+        data-full-page="true"
+        data-min-height="100vh"
+        data-form-id="60361"
+      ></div>
+      <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+    </div>
+
+    <!-- Other content of your page goes here -->
+
+    <script>
+      // Check if the form has been displayed before
+      const hasFormDisplayed = sessionStorage.getItem("hasFormDisplayed");
+
+      // If the form has not been displayed before, and the user is logged in, display the form
+      if (!hasFormDisplayed) {
+        const isLoggedIn = true; // Replace with your actual login check logic
+        if (isLoggedIn) {
+          document.getElementById("formContainer").style.display = "block";
+          // Mark the form as displayed in sessionStorage
+          sessionStorage.setItem("hasFormDisplayed", "true");
+        }
+      }
+    </script>
+
+    <!-- React App Script -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

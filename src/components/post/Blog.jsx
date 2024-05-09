@@ -40,13 +40,15 @@ const SubHeading = styled(Typography)`
 const CardContainer = styled(Card)`
   margin: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
-
+  box-shadow: 0 4px 8px 0 rgba(186, 225, 255, 0.2);
+  background-color: #e5eaf5;
   &:hover {
-    background-color: #f0f0f0; // Change as needed
+    background-color: #ffdfba;
     transform: scale(1.005);
+  }
 
+  /* Add the background-color for normal state */
+  background-color: #bae1ff;
 `;
 
 const PostTitle = styled(Typography)`
@@ -80,7 +82,7 @@ const Blog = () => {
     if (!user) {
       window.location.href = "/login";
     }
-    fetch("http://localhost:8000/api/user/blogs", {
+    fetch(`${API_URL}/api/blogs`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
