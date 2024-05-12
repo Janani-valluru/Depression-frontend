@@ -10,7 +10,7 @@ export const useSignup = () => {
   const signup = async (name, email, password) => {
     setIsLoading(true);
     setError(null);
-    const response = await fetch('http://localhost:8000/api/user/signup', {
+    const response = await fetch(`${API_URL}/api/user/signup`, {
       method: "POST",
       body: JSON.stringify({ name, email, password }),
       headers: {

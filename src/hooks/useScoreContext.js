@@ -19,7 +19,7 @@ const Results = async (props) => {
   useEffect(() => {
     const sendResults = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/tests/", {
+        const response = await fetch(`${API_URL}/api/tests/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
