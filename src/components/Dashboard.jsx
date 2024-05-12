@@ -43,7 +43,7 @@ function Dashboard(props) {
 
           // Make HTTP POST request to Flask backend for predictions
           // Adjust data structure as needed
-          fetch("http://localhost:5000/predict", {
+          fetch(`${API_URL}/predict`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

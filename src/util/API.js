@@ -24,7 +24,7 @@ export default {
   },
   */
   getDashboardData: function (username) {
-    return axios.get("http://localhost:8000/api/tests?username=" + username);
+    return axios.get(`${API_URL}/api/tests?username=` + username);
   },
 
   getBySpecificMonth: function (month) {
