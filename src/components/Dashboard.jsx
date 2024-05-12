@@ -4,6 +4,7 @@ import API from "../util/API"; // Assuming this is correctly defined in your pro
 import { AuthContext } from "../context/AuthContext";
 import Recommendations from "./Recommendations"; // Import the Recommendations component
 import Chart from "chart.js/auto";
+import { API_URL } from "../components/constants/data";
 function Dashboard(props) {
   const [chartData, setChartData] = useState({});
   const [predictedLevel, setPredictedLevel] = useState(""); // State to hold predicted depression level

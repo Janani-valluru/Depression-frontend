@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { API_URL } from "../components/constants/data";
 export default {
   submitFeeling: function (feelings) {
     return axios.post("/api/feelings/:" + feelings.user, feelings);
