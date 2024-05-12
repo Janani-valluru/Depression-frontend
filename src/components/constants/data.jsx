@@ -6,7 +6,7 @@ import workplace from "../../assets/workplace.jpg";
 import happiness from "../../assets/happy.jpg";
 import { quizQuestions } from "./quizquestions";
 
-export const API_URL = "https://depression-backend-01.vercel.app/";
+export const API_URL = "depression-backend-eight.vercel.app";
 
 export const categories = [
   { id: 1, type: "Depression" },
