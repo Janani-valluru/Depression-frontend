@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
-import API from "../util/API"; // Assuming this is correctly defined in your project
+import API from "../util/API";
 import { AuthContext } from "../context/AuthContext";
 import Recommendations from "./Recommendations"; // Import the Recommendations component
 import Chart from "chart.js/auto";

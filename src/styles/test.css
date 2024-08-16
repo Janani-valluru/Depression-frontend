@@ -1,15 +1,15 @@
 .test-container {
     padding-top: 5vh;
     width: 100%;
-    background: peachpuff;
-    background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);
+    
+    background-color: #efa581;
 }
 
 .test-detail-section {
     display: flex;
     align-items: center;
     height: 85vh;
-    background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);
+    background-color: #efa581;
 }
 
 .test-left {
@@ -28,7 +28,7 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);;
+    background-color: #f0c2b3;
     padding-top: 3vh;
     padding-bottom: 3vh;
 }

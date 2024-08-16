@@ -1,7 +1,7 @@
 .detailed-post-container {
     margin-top: 15%; /* Adjust according to your navbar height */
     padding: 20px;
-    background-color: #f4f4f4; /* Light grey background */
+background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1); /* Light grey background */
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     max-width: 70%; /* Adjust as needed */
@@ -13,7 +13,7 @@
 
 .detailed-post-title {
     color: #333; /* Dark text for contrast */
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 10px;  
       white-space: normal;
     word-wrap: break-word;
@@ -21,7 +21,7 @@
 }
 
 .detailed-post-description {
-    color: #555; /* Slightly lighter text for the body */
+    color: #171414; /* Slightly lighter text for the body */
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 15px;

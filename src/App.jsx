@@ -23,6 +23,7 @@ import BotpressChat from "./components/BotpressChat.jsx";
 import { Toaster } from "react-hot-toast";
 import NotFoundPage from "./components/404page";
 import Recommendations from "./components/Recommendations.jsx";
+
 function App() {
   return (
     <Router>

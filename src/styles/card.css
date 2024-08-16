@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Publico:wght@400;700&display=swap');
 .card-container {
     box-shadow: 1px 1px 1px 1px rgba(179, 172, 172, 0.2);
     display: flex;
@@ -5,9 +7,8 @@
     margin: 20px;
     padding: 10px;
     border-radius: 15px;
-    background-color: white;
+background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);
 }
-
 .card-img {
     width: 100px;
     height: 100px;
@@ -25,15 +26,26 @@
 
 .card-heading {
     font-size: 1.5rem;
+    /* Adjusts the size of the font */
     font-weight: bold;
+    /* Makes the font bold */
     margin-bottom: 10px;
+    /* Adds space below the heading */
+    color: #525b31;
+    /* Sets the text color */
+    font-family: "Lato", serif;
+    /* Specifies the font family with a fallback */
 }
 
 .card-desc {
     font-size: 1rem;
     width: 100%;
-    color: gray;
+
+    color: #2a3115;
     letter-spacing: 1px;
+    
+    font-family: "Lato", serif;
+  
 }
 
 .card-btn {
@@ -43,6 +55,7 @@
     align-items: flex-end;
     margin-top: 20px;
     text-decoration: none;
+    color: #404042;
 }
 
 .card-btn:hover {

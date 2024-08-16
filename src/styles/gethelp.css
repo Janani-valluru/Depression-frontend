@@ -1,7 +1,7 @@
 .card {
   display: inline-block;
   width: 300px;
-  height: 480px;
+  height: 400px;
   margin: 15px;
   padding: 20px;
   border: 1px solid #F6C4C3;
@@ -49,15 +49,15 @@
 
 .gethelp-container {
   align-items: center;
-  margin-top: 16vh;
+  margin-top: 15vh;
   margin-left: 20vh;
   margin-right: 17vh;
-  margin-bottom: 1vh;
+ 
   padding: 0%;
 }
 
 .box-style {
-  background-image: linear-gradient(to left bottom, #f8dbd8, #ffddca, #ffe2b6, #ffeda3, #fafc97);
+  background-image: #e6dffa;
 }
 
 .page-container {

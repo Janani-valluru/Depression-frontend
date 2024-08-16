@@ -8,33 +8,15 @@ import toast from "react-hot-toast";
 const Image = styled(Box)`
   margin-top: 36px;
   width: 100%;
-  background: url(https://cdn.pixabay.com/photo/2017/05/30/03/58/blog-2355684_640.jpg)
+  background: url(https://img.freepik.com/free-vector/tiny-people-screen-mobile-phones-using-online-services-woman-men-with-laptop-smartphone-tablet-communicating-flat-vector-illustration-internet-communication-job-interview-concept_74855-21015.jpg?t=st=1723728221~exp=1723731821~hmac=4ea02b612c5bd215e166bc0594a17f9740eed3d4941226ded43faa4e766e3575&w=996)
     center/55% repeat-x #000;
-  height: 50vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
-
-const Heading = styled(Typography)`
-  font-size: 70px;
-  background: #e5caa4;
-  line-height: 1;
-  border-radius: 5px;
-  padding: 15px;
-  margin-top: 15vh;
-`;
-
-const SubHeading = styled(Typography)`
-  font-size: 20px;
-  background: #e5caa4;
-  border-radius: 5px;
-  margin-top: 3vh;
-  padding-left: 15px;
-  padding-right: 70px;
-  // padding-bottom:3.5vh;
-  color: #;
+  objectfit: "cover";
+  background: "no-repeat";
 `;
 
 const CardContainer = styled(Card)`
@@ -48,7 +30,7 @@ const CardContainer = styled(Card)`
   }
 
   /* Add the background-color for normal state */
-  background-color: #bae1ff;
+  background-color: #fde5e3;
 `;
 
 const PostTitle = styled(Typography)`
@@ -64,7 +46,9 @@ const PostContent = styled(Typography)`
 const PostMeta = styled(Typography)`
   font-size: 14px;
   color: #999;
-  margin-top: 10px;
+
+  width: 200px;
+  height: 20px;
 `;
 
 const PostCategory = styled(Typography)`
@@ -162,10 +146,7 @@ const Blog = () => {
 
   return (
     <div>
-      <Image>
-        <Heading>Share your experience</Heading>
-        <SubHeading>let others know what you have gone through ...</SubHeading>
-      </Image>
+      <Image></Image>
       <br />
 
       {/* Category Selector Container */}

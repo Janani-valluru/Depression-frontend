@@ -3,7 +3,7 @@
     height: 70vh;
     width: 100%;
     /* background-color: #F8F6F4; */
-    background-image: linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);
+    background-image:linear-gradient(to left bottom, #eb8693, #f0a492, #efc2a0, #edddbd, #f3f5e1);
 }
 
 .quiz-page-title {
@@ -12,6 +12,7 @@
     margin: 2rem;
     margin-bottom: 2rem;
     letter-spacing: 1px;
+    color: #525b31;
 }
 
 .quiz-page-question {
@@ -19,6 +20,7 @@
     font-weight: 500;
     margin: 2.5rem;
     letter-spacing: 2px;
+    color: #525b31;
 }
 
 .quiz-answers {
@@ -42,7 +44,7 @@
     border: 1px solid #ccc;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    color: white;
+    color:#e6dffa;
     font-weight: bold;
 }
 
